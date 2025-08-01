@@ -2,75 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Movie Analysis: 2020–2024</title>
+  <title>Movie Trends Analysis (2020–2024)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      background-color: #fdfdfd;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5fa;
+      color: #222;
     }
 
-    h1, h2 {
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #eee;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
       color: #4b0082;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #4b0082;
+      margin-top: 50px;
     }
 
     .section {
-      margin-bottom: 100px;
-      min-height:500px;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .plot {
-      border: 1px dashed #ccc;
-      height: 500px;
-      margin-top: 15px;
+    iframe {
+      border: none;
+      width: 100%;
+      height: 700px;
+      border-radius: 8px;
+    }
+
+    footer {
       text-align: center;
-      line-height: 400px;
-      color: #888;
-      font-style: italic;
-      background-color: #fafafa;
+      font-size: 0.9em;
+      color: #666;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
 
-  <h1>🎬 Movie Trends Analysis (2020–2024)</h1>
-  <p>This project explores trends in popular movies from 2020 to 2024 using data from the most-rated films each year. The analysis focuses on genre diversity, rating patterns, and vote behavior to uncover interesting insights and hidden gems.</p>
+  <header>
+    <h1>🎬 Movie Trends Analysis (2020–2024)</h1>
+    <p>Uncovering insights from the 375 most-rated films across five years.</p>
+  </header>
 
-  <div class="section">
-    <h2>1. Most Frequently Appearing Genres</h2>
-    <p>We counted how often each genre appeared across all 375 movies. This gives a sense of which genres dominated mainstream cinema. Genres like <strong>Drama</strong> and <strong>Action</strong> appeared the most frequently.</p>
-  <iframe src="plots/genre_counts.html" width="100%" height="700px" frameborder="0"></iframe>
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#genres">Genres</a>
+    <a href="#diversity">Diversity</a>
+    <a href="#ratings">Ratings</a>
+    <a href="#votes">Votes</a>
+    <a href="#gems">Hidden Gems</a>
+  </nav>
+
+  <div class="container">
+
+    <div id="introduction" class="section">
+      <h2>📌 Introduction</h2>
+      <p>Between 2020 and 2024, the film industry underwent remarkable transformations — shaped by global events, streaming dominance, and evolving viewer preferences. In this project, we analyzed the <strong>375 most-rated films</strong> from each year to uncover emerging trends and patterns in mainstream cinema.</p>
+
+      <p>Our analysis explores:</p>
+      <ul>
+        <li>📊 Which <strong>genres</strong> dominated and how genre diversity shifted</li>
+        <li>⭐ How <strong>ratings</strong> varied across genres and time</li>
+        <li>🔁 The relationship between <strong>popularity</strong> (votes) and <strong>perceived quality</strong> (ratings)</li>
+        <li>💎 And perhaps most intriguingly — the <strong>hidden gems</strong>: highly rated but lesser-known films that deserve more attention</li>
+      </ul>
+
+      <p>Using visualizations and data summaries, this site provides a clear, data-driven look at how popular movies evolved in the early 2020s — and what that says about audience tastes, industry output, and overlooked cinematic brilliance.</p>
+    </div>
+
+    <div id="genres" class="section">
+      <h2>1. Most Frequently Appearing Genres</h2>
+      <p>By tallying each genre's frequency across 375 films, we found that <strong>Drama</strong> and <strong>Action</strong> consistently dominate mainstream releases. This highlights the industry's preference for emotionally driven narratives and high-stakes storytelling.</p>
+      <iframe src="plots/genre_counts.html"></iframe>
+    </div>
+
+    <div id="diversity" class="section">
+      <h2>2. Genre Diversity Over Time</h2>
+      <p>We analyzed how many <strong>unique genres</strong> appeared each year. Surprisingly, genre diversity <em>declined</em> from 2020 to 2024, suggesting that the top movies became less varied in style and content.</p>
+      <p style="font-style: italic; color: gray;">⬇ A narrower genre landscape among the most-watched films</p>
+      <iframe src="plots/genre_diversity.html" height="600px" ></iframe>
+    </div>
+
+    <div id="ratings" class="section">
+      <h2>3. Rating Distribution by Genre</h2>
+      <p>This boxplot shows how viewer ratings differ by genre. While genres like <strong>Documentary</strong> tend to score high, others like <strong>Horror</strong> show mixed responses, reflecting polarizing content and niche appeal.</p>
+      <iframe src="plots/genre_avg_rating.html" height="100px" ></iframe>
+    </div>
+
+    <div id="votes" class="section">
+      <h2>4. Relationship Between Rating and Vote Count</h2>
+      <p>Is popularity linked to quality? We explored the correlation between <strong>average ratings</strong> and <strong>vote counts</strong>. Results suggest no clear linear relationship — some highly rated films received few votes, while popular movies didn’t always score well.</p>
+      <iframe src="plots/ratings_by_vote_count.html"></iframe>
+      <iframe src="plots/rating_and_count_by_vote.html" height="500px" ></iframe>
+    </div>
+
+    <div id="gems" class="section">
+      <h2>5. Hidden Gems</h2>
+      <p>These are the <strong>top-rated yet under-voted</strong> films — the hidden gems of the 2020s. Though overlooked by the masses, they received strong praise from those who saw them. A few examples include <em>[Movie A]</em>, <em>[Movie B]</em>, and <em>[Movie C]</em>.</p>
+      <iframe src="plots/hidden_gems_table.html"></iframe>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>2. Genre Diversity Over Time</h2>
-    <p>To measure how diverse the genre landscape was, we counted the number of <strong>unique genres per year</strong>. The result shows a <strong>decreasing trend</strong> in genre diversity — meaning fewer different genres are represented in top movies over time.</p>
-    <p style="font-style: italic; color: gray;">↓ Fewer genres represented each year among top 75 movies</p>
-    <iframe src="plots/genre_diversity.html" width="100%" height="700px" frameborder="0"></iframe>
-  </div>
-
-  <div class="section">
-    <h2>3. Rating Distribution by Genre</h2>
-    <p>Using a boxplot, we examined how <strong>average ratings vary by genre</strong>. Some genres consistently receive higher ratings than others, and some show wide variation in quality. This highlights genre-based viewer preferences and content quality trends.</p>
-    <iframe src="plots/genre_avg_rating.html" width="100%" height="700px" frameborder="0"></iframe>
-  </div>
-
-  <div class="section">
-    <h2>4. Relationship Between Rating and Vote Count</h2>
-    <p>We analyzed the correlation between <strong>vote average</strong> and <strong>vote count</strong> across all movies. A line plot and boxplot helped us explore whether movies with more votes tend to receive higher ratings. The results suggest a complex, nonlinear relationship.</p>
-    <div class="plot">[INSERT PLOT: Line or scatter plot of rating vs vote count]</div>
-  </div>
-
-  <div class="section">
-    <h2>5. Hidden Gems</h2>
-    <p>We filtered for <strong>highly rated but lesser-voted</strong> movies to find hidden gems — movies that were well-reviewed but didn’t receive widespread attention. These could be great recommendations for curious viewers looking for quality content off the radar.</p>
-    
-    <iframe src="plots/hidden_gems_table.html" width="100%" height="700" frameborder="0"></iframe>
-  </div>
+  <footer>
+    © 2025 Movie Trends Project | Created by Prashant Ghimire
+  </footer>
 
 </body>
 </html>
