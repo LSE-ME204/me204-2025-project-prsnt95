@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script src="index.js"></script>
-    <h1>HTML 5 Boilerplate</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Analysis: 2020–2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      line-height: 1.6;
+      padding: 0 20px;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #4b0082;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .plot {
+      border: 1px dashed #ccc;
+      height: 400px;
+      margin-top: 15px;
+      text-align: center;
+      line-height: 400px;
+      color: #888;
+      font-style: italic;
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 Movie Trends Analysis (2020–2024)</h1>
+  <p>This project explores trends in popular movies from 2020 to 2024 using data from the most-rated films each year. The analysis focuses on genre diversity, rating patterns, and vote behavior to uncover interesting insights and hidden gems.</p>
+
+  <div class="section">
+    <h2>1. Most Frequently Appearing Genres</h2>
+    <p>We counted how often each genre appeared across all 375 movies. This gives a sense of which genres dominated mainstream cinema. Genres like <strong>Drama</strong> and <strong>Action</strong> appeared the most frequently.</p>
+    <div class="plot">[INSERT PLOT: Bar chart of genre frequency]</div>
+  </div>
+
+  <div class="section">
+    <h2>2. Genre Diversity Over Time</h2>
+    <p>To measure how diverse the genre landscape was, we counted the number of <strong>unique genres per year</strong>. The result shows a <strong>decreasing trend</strong> in genre diversity — meaning fewer different genres are represented in top movies over time.</p>
+    <p style="font-style: italic; color: gray;">↓ Fewer genres represented each year among top 75 movies</p>
+    <div class="plot">[INSERT PLOT: Bar chart of genre diversity by year]</div>
+  </div>
+
+  <div class="section">
+    <h2>3. Rating Distribution by Genre</h2>
+    <p>Using a boxplot, we examined how <strong>average ratings vary by genre</strong>. Some genres consistently receive higher ratings than others, and some show wide variation in quality. This highlights genre-based viewer preferences and content quality trends.</p>
+    <div class="plot">[INSERT PLOT: Boxplot of rating by genre]</div>
+  </div>
+
+  <div class="section">
+    <h2>4. Relationship Between Rating and Vote Count</h2>
+    <p>We analyzed the correlation between <strong>vote average</strong> and <strong>vote count</strong> across all movies. A line plot and boxplot helped us explore whether movies with more votes tend to receive higher ratings. The results suggest a complex, nonlinear relationship.</p>
+    <div class="plot">[INSERT PLOT: Line or scatter plot of rating vs vote count]</div>
+  </div>
+
+  <div class="section">
+    <h2>5. Hidden Gems</h2>
+    <p>We filtered for <strong>highly rated but lesser-voted</strong> movies to find hidden gems — movies that were well-reviewed but didn’t receive widespread attention. These could be great recommendations for curious viewers looking for quality content off the radar.</p>
+    <div class="plot">[INSERT PLOT: Scatterplot or table of hidden gems]</div>
+  </div>
+
+</body>
 </html>
