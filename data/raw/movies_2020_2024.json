@@ -5331,7 +5331,7 @@
     "year":2024,
     "popularity":21.8196,
     "vote_average":8.14,
-    "vote_count":6877,
+    "vote_count":6879,
     "genre_ids":[
       878,
       12
@@ -5384,8 +5384,8 @@
     "title":"The Substance",
     "year":2024,
     "popularity":28.9381,
-    "vote_average":7.14,
-    "vote_count":4893,
+    "vote_average":7.139,
+    "vote_count":4894,
     "genre_ids":[
       18,
       27,
@@ -5455,7 +5455,7 @@
     "year":2024,
     "popularity":15.0112,
     "vote_average":7.062,
-    "vote_count":3817,
+    "vote_count":3820,
     "genre_ids":[
       878,
       12,
@@ -5548,7 +5548,7 @@
     "title":"Kung Fu Panda 4",
     "year":2024,
     "popularity":25.8803,
-    "vote_average":7.1,
+    "vote_average":7.058,
     "vote_count":3152,
     "genre_ids":[
       16,
@@ -5614,8 +5614,8 @@
     "title":"Nosferatu",
     "year":2024,
     "popularity":20.3886,
-    "vote_average":6.701,
-    "vote_count":2888,
+    "vote_average":6.7,
+    "vote_count":2890,
     "genre_ids":[
       18,
       27,
@@ -5670,8 +5670,8 @@
     "title":"Sonic the Hedgehog 3",
     "year":2024,
     "popularity":43.5471,
-    "vote_average":7.674,
-    "vote_count":2810,
+    "vote_average":7.673,
+    "vote_count":2811,
     "genre_ids":[
       28,
       878,
