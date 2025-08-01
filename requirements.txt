@@ -1,0 +1,7 @@
+requests
+pandas
+python-dotenv
+matplotlib
+seaborn
+mpld3
+plotly
