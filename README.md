@@ -41,7 +41,7 @@ TMDB_API_KEY=your_api_key_here
 
 ## Script Execution Order
 
-Run the three scripts **sequentially**. Replace the placeholders below with your actual filenames:
+Run the three scripts **sequentially**.
 
 ```bash
 python notebooks/NB01-data-collection.ipynb   
@@ -67,6 +67,7 @@ python notebooks/NB01-data-analysis.ipynb
 ├─ .env               # not committed
 └─ README.md
 └─ .gitignore
+└─ .requirements.txt
 ```
 
 ---
