@@ -19,12 +19,13 @@
     }
 
     .section {
-      margin-bottom: 60px;
+      margin-bottom: 100px;
+      min-height:500px;
     }
 
     .plot {
       border: 1px dashed #ccc;
-      height: 400px;
+      height: 500px;
       margin-top: 15px;
       text-align: center;
       line-height: 400px;
@@ -42,21 +43,20 @@
   <div class="section">
     <h2>1. Most Frequently Appearing Genres</h2>
     <p>We counted how often each genre appeared across all 375 movies. This gives a sense of which genres dominated mainstream cinema. Genres like <strong>Drama</strong> and <strong>Action</strong> appeared the most frequently.</p>
-    <div class="plot"><iframe src="../plots/top_10_genres.html" width="100%" height="500px" frameborder="0"></iframe>
-    </div>
+  <iframe src="../plots/genre_counts.html" width="100%" height="700px" frameborder="0"></iframe>
   </div>
 
   <div class="section">
     <h2>2. Genre Diversity Over Time</h2>
     <p>To measure how diverse the genre landscape was, we counted the number of <strong>unique genres per year</strong>. The result shows a <strong>decreasing trend</strong> in genre diversity — meaning fewer different genres are represented in top movies over time.</p>
     <p style="font-style: italic; color: gray;">↓ Fewer genres represented each year among top 75 movies</p>
-    <div class="plot">[INSERT PLOT: Bar chart of genre diversity by year]</div>
+    <iframe src="../plots/genre_diversity.html" width="100%" height="700px" frameborder="0"></iframe>
   </div>
 
   <div class="section">
     <h2>3. Rating Distribution by Genre</h2>
     <p>Using a boxplot, we examined how <strong>average ratings vary by genre</strong>. Some genres consistently receive higher ratings than others, and some show wide variation in quality. This highlights genre-based viewer preferences and content quality trends.</p>
-    <div class="plot">[INSERT PLOT: Boxplot of rating by genre]</div>
+    <iframe src="../plots/genre_avg_rating.html" width="100%" height="700px" frameborder="0"></iframe>
   </div>
 
   <div class="section">
