@@ -73,12 +73,11 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>🎬 Movie Trends Analysis (2020–2024)</h1>
-    <p>Uncovering insights from the 375 most-rated films across five years.</p>
+    <p>Exploring how audience tastes and movie popularity evolved across 375 top films from five transformative years.</p>
   </header>
-
+  
   <nav>
     <a href="#introduction">Introduction</a>
     <a href="#genres">Genres</a>
@@ -87,53 +86,57 @@
     <a href="#votes">Votes</a>
     <a href="#gems">Hidden Gems</a>
   </nav>
-
+  
   <div class="container">
-
+  
     <div id="introduction" class="section">
       <h2>📌 Introduction</h2>
-      <p>Between 2020 and 2024, the film industry underwent remarkable transformations — shaped by global events, streaming dominance, and evolving viewer preferences. In this project, we analyzed the <strong>375 most-rated films</strong> from each year to uncover emerging trends and patterns in mainstream cinema.</p>
-
-      <p>Our analysis explores:</p>
+      <p>In this project, I explored the 375 most-rated movies from each year between 2020 and 2024, aiming to understand what shaped mainstream cinema in these years.</p>
+  
+      <p>Here’s how I collected and processed the data: using public movie information from TMDb, I gathered details on ratings, genres, votes, and release years, then cleaned and organized the data for analysis.</p>
+  
+      <p>This page presents three key insights:</p>
       <ul>
-        <li>📊 Which <strong>genres</strong> dominated and how genre diversity shifted</li>
-        <li>⭐ How <strong>ratings</strong> varied across genres and time</li>
-        <li>🔁 The relationship between <strong>popularity</strong> (votes) and <strong>perceived quality</strong> (ratings)</li>
-        <li>💎 And perhaps most intriguingly — the <strong>hidden gems</strong>: highly rated but lesser-known films that deserve more attention</li>
+        <li>📊 Which genres dominated and how genre diversity changed over time</li>
+        <li>⭐ How average ratings varied by genre</li>
+        <li>🔁 The link between popularity (vote counts) and perceived quality (ratings)</li>
       </ul>
-
-      <p>Using visualizations and data summaries, this site provides a clear, data-driven look at how popular movies evolved in the early 2020s — and what that says about audience tastes, industry output, and overlooked cinematic brilliance.</p>
+  
+      <p>The charts attempt to give a clear, concise view of movie trends and audience preferences in the early 2020s.</p>
     </div>
 
-    <div id="genres" class="section">
+      <div id="genres" class="section">
       <h2>1. Most Frequently Appearing Genres</h2>
-      <p>By tallying each genre's frequency across 375 films, we found that <strong>Drama</strong> and <strong>Action</strong> consistently dominate mainstream releases. This highlights the industry's preference for emotionally driven narratives and high-stakes storytelling.</p>
-      <iframe src="plots/genre_counts.html"></iframe>
+      <p>
+        By tallying each genre's frequency across 375 films, we found that <strong>Action</strong> and <strong>Adventure</strong> movies appeared most often among the top-rated films each year. This suggests these genres are especially popular with audiences. However, it's also possible that more action and adventure movies are simply produced overall, increasing their chances of ranking highly. So while they dominate the charts, this may reflect both  <strong>audience preference</strong> and <strong>industry production</strong> trends.
+      </p>
+            <iframe src="plots/genre_counts.html"></iframe>
     </div>
 
     <div id="diversity" class="section">
       <h2>2. Genre Diversity Over Time</h2>
-      <p>We analyzed how many <strong>unique genres</strong> appeared each year. Surprisingly, genre diversity <em>declined</em> from 2020 to 2024, suggesting that the top movies became less varied in style and content.</p>
+      <p>We analyzed how many <strong>unique genres</strong> appeared each year. Surprisingly, genre diversity <em>declined</em> from 2020 to 2024 from 18 unique genre appearing in top 75 in 2020 vs 15 in 2024, suggesting that the top movies became less varied in style and content.</p>
       <p style="font-style: italic; color: gray;">⬇ A narrower genre landscape among the most-watched films</p>
       <iframe src="plots/genre_diversity.html" height="600px" ></iframe>
     </div>
 
     <div id="ratings" class="section">
       <h2>3. Rating Distribution by Genre</h2>
-      <p>This boxplot shows how viewer ratings differ by genre. While genres like <strong>Documentary</strong> tend to score high, others like <strong>Horror</strong> show mixed responses, reflecting polarizing content and niche appeal.</p>
+      <p>This plot shows how viewer ratings differ by genre.Genres like <strong>Animation </strong> tend to score high, others like <strong>Horror </strong> and <strong>Mystery </strong>show lower overall rating.</p>
       <iframe src="plots/genre_avg_rating.html" height="100px" ></iframe>
     </div>
 
     <div id="votes" class="section">
       <h2>4. Relationship Between Rating and Vote Count</h2>
-      <p>Is popularity linked to quality? We explored the correlation between <strong>average ratings</strong> and <strong>vote counts</strong>. Results suggest no clear linear relationship — some highly rated films received few votes, while popular movies didn’t always score well.</p>
+      <p>
+        Does popularity reflect quality? Our analysis shows a positive trend: movies with more votes generally have higher average ratings. This suggests that good movies tend to attract larger audiences and more reviews.
+      </p>
       <iframe src="plots/ratings_by_vote_count.html"></iframe>
-      <iframe src="plots/rating_and_count_by_vote.html" height="500px" ></iframe>
+      <iframe src="plots/rating_and_count_by_vote.html" height="500px"></iframe>
     </div>
-
-    <div id="gems" class="section">
+        <div id="gems" class="section">
       <h2>5. Hidden Gems</h2>
-      <p>These are the <strong>top-rated yet under-voted</strong> films — the hidden gems of the 2020s. Though overlooked by the masses, they received strong praise from those who saw them. A few examples include <em>[Movie A]</em>, <em>[Movie B]</em>, and <em>[Movie C]</em>.</p>
+      <p>These are the <strong>top-rated yet under-voted</strong> films — the hidden gems of the 2020s. Though overlooked by the masses, they received strong praise from those who saw them. A few examples include <em>Gabriel's Inferno: Part II	</em>, and <em>Life in a Year	</em>.</p>
       <iframe src="plots/hidden_gems_table.html"></iframe>
     </div>
   </div>
