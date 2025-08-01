@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hidden Gems by Genre</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      line-height: 1.6;
+      padding: 0 20px;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    select {
+      font-size: 16px;
+      padding: 6px 10px;
+      margin-bottom: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Hidden Gems by Genre</h1>
+
+  <label for="genreSelect"><strong>Select Genre:</strong></label>
+  <select id="genreSelect" onchange="showTable()">
+    <option value="All">All</option>
+    <option value="Action">Action</option><option value="Adventure">Adventure</option><option value="Animation">Animation</option><option value="Comedy">Comedy</option><option value="Drama">Drama</option><option value="Fantasy">Fantasy</option><option value="Romance">Romance</option><option value="Science Fiction">Science Fiction</option>
+  </select>
+
+  
+    <div class="table-container" id="container-All" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-All">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gabriel's Inferno: Part II</td>
+      <td>Romance, Drama</td>
+      <td>8.38</td>
+      <td>1527</td>
+    </tr>
+    <tr>
+      <td>Life in a Year</td>
+      <td>Drama, Romance</td>
+      <td>8.24</td>
+      <td>1922</td>
+    </tr>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Animation, Action, Science Fiction, Adventure, Fantasy</td>
+      <td>8.20</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Hamilton</td>
+      <td>History, Drama</td>
+      <td>8.14</td>
+      <td>1519</td>
+    </tr>
+    <tr>
+      <td>Mortal Kombat Legends: Scorpion's Revenge</td>
+      <td>Animation, Action, Fantasy</td>
+      <td>8.10</td>
+      <td>1411</td>
+    </tr>
+    <tr>
+      <td>Transformers One</td>
+      <td>Animation, Science Fiction, Adventure, Family</td>
+      <td>8.10</td>
+      <td>1335</td>
+    </tr>
+    <tr>
+      <td>The Count of Monte Cristo</td>
+      <td>Adventure, Action, Drama</td>
+      <td>7.98</td>
+      <td>1718</td>
+    </tr>
+    <tr>
+      <td>Ron's Gone Wrong</td>
+      <td>Animation, Science Fiction, Family, Comedy</td>
+      <td>7.90</td>
+      <td>1925</td>
+    </tr>
+    <tr>
+      <td>A Whisker Away</td>
+      <td>Animation, Drama, Romance, Fantasy</td>
+      <td>7.90</td>
+      <td>1427</td>
+    </tr>
+    <tr>
+      <td>Perfect Days</td>
+      <td>Drama</td>
+      <td>7.80</td>
+      <td>1543</td>
+    </tr>
+    <tr>
+      <td>Luck</td>
+      <td>Animation, Adventure, Comedy, Fantasy</td>
+      <td>7.77</td>
+      <td>1823</td>
+    </tr>
+    <tr>
+      <td>Past Lives</td>
+      <td>Drama, Romance</td>
+      <td>7.70</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <td>Tetris</td>
+      <td>Thriller, History, Drama</td>
+      <td>7.67</td>
+      <td>1488</td>
+    </tr>
+    <tr>
+      <td>To All the Boys: Always and Forever</td>
+      <td>Romance, Comedy, Drama</td>
+      <td>7.50</td>
+      <td>1985</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Action" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Action">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Action</td>
+      <td>8.20</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Mortal Kombat Legends: Scorpion's Revenge</td>
+      <td>Action</td>
+      <td>8.10</td>
+      <td>1411</td>
+    </tr>
+    <tr>
+      <td>The Count of Monte Cristo</td>
+      <td>Action</td>
+      <td>7.98</td>
+      <td>1718</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Adventure" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Adventure">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Adventure</td>
+      <td>8.20</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Transformers One</td>
+      <td>Adventure</td>
+      <td>8.10</td>
+      <td>1335</td>
+    </tr>
+    <tr>
+      <td>The Count of Monte Cristo</td>
+      <td>Adventure</td>
+      <td>7.98</td>
+      <td>1718</td>
+    </tr>
+    <tr>
+      <td>Luck</td>
+      <td>Adventure</td>
+      <td>7.77</td>
+      <td>1823</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Animation" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Animation">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Animation</td>
+      <td>8.20</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Mortal Kombat Legends: Scorpion's Revenge</td>
+      <td>Animation</td>
+      <td>8.10</td>
+      <td>1411</td>
+    </tr>
+    <tr>
+      <td>Transformers One</td>
+      <td>Animation</td>
+      <td>8.10</td>
+      <td>1335</td>
+    </tr>
+    <tr>
+      <td>Ron's Gone Wrong</td>
+      <td>Animation</td>
+      <td>7.90</td>
+      <td>1925</td>
+    </tr>
+    <tr>
+      <td>A Whisker Away</td>
+      <td>Animation</td>
+      <td>7.90</td>
+      <td>1427</td>
+    </tr>
+    <tr>
+      <td>Luck</td>
+      <td>Animation</td>
+      <td>7.77</td>
+      <td>1823</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Comedy" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Comedy">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ron's Gone Wrong</td>
+      <td>Comedy</td>
+      <td>7.90</td>
+      <td>1925</td>
+    </tr>
+    <tr>
+      <td>Luck</td>
+      <td>Comedy</td>
+      <td>7.77</td>
+      <td>1823</td>
+    </tr>
+    <tr>
+      <td>To All the Boys: Always and Forever</td>
+      <td>Comedy</td>
+      <td>7.50</td>
+      <td>1985</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Drama" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Drama">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gabriel's Inferno: Part II</td>
+      <td>Drama</td>
+      <td>8.38</td>
+      <td>1527</td>
+    </tr>
+    <tr>
+      <td>Life in a Year</td>
+      <td>Drama</td>
+      <td>8.24</td>
+      <td>1922</td>
+    </tr>
+    <tr>
+      <td>Hamilton</td>
+      <td>Drama</td>
+      <td>8.14</td>
+      <td>1519</td>
+    </tr>
+    <tr>
+      <td>The Count of Monte Cristo</td>
+      <td>Drama</td>
+      <td>7.98</td>
+      <td>1718</td>
+    </tr>
+    <tr>
+      <td>A Whisker Away</td>
+      <td>Drama</td>
+      <td>7.90</td>
+      <td>1427</td>
+    </tr>
+    <tr>
+      <td>Perfect Days</td>
+      <td>Drama</td>
+      <td>7.80</td>
+      <td>1543</td>
+    </tr>
+    <tr>
+      <td>Past Lives</td>
+      <td>Drama</td>
+      <td>7.70</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <td>Tetris</td>
+      <td>Drama</td>
+      <td>7.67</td>
+      <td>1488</td>
+    </tr>
+    <tr>
+      <td>To All the Boys: Always and Forever</td>
+      <td>Drama</td>
+      <td>7.50</td>
+      <td>1985</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Fantasy" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Fantasy">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Fantasy</td>
+      <td>8.20</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Mortal Kombat Legends: Scorpion's Revenge</td>
+      <td>Fantasy</td>
+      <td>8.10</td>
+      <td>1411</td>
+    </tr>
+    <tr>
+      <td>A Whisker Away</td>
+      <td>Fantasy</td>
+      <td>7.90</td>
+      <td>1427</td>
+    </tr>
+    <tr>
+      <td>Luck</td>
+      <td>Fantasy</td>
+      <td>7.77</td>
+      <td>1823</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Romance" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Romance">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gabriel's Inferno: Part II</td>
+      <td>Romance</td>
+      <td>8.38</td>
+      <td>1527</td>
+    </tr>
+    <tr>
+      <td>Life in a Year</td>
+      <td>Romance</td>
+      <td>8.24</td>
+      <td>1922</td>
+    </tr>
+    <tr>
+      <td>A Whisker Away</td>
+      <td>Romance</td>
+      <td>7.90</td>
+      <td>1427</td>
+    </tr>
+    <tr>
+      <td>Past Lives</td>
+      <td>Romance</td>
+      <td>7.70</td>
+      <td>1969</td>
+    </tr>
+    <tr>
+      <td>To All the Boys: Always and Forever</td>
+      <td>Romance</td>
+      <td>7.50</td>
+      <td>1985</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="table-container" id="container-Science Fiction" style="display:none">
+      <table border="1" class="dataframe genre-table" id="table-Science Fiction">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Rating</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justice League Dark: Apokolips War</td>
+      <td>Science Fiction</td>
+      <td>8.2</td>
+      <td>1501</td>
+    </tr>
+    <tr>
+      <td>Transformers One</td>
+      <td>Science Fiction</td>
+      <td>8.1</td>
+      <td>1335</td>
+    </tr>
+    <tr>
+      <td>Ron's Gone Wrong</td>
+      <td>Science Fiction</td>
+      <td>7.9</td>
+      <td>1925</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+
+  <script>
+    function showTable() {
+      var select = document.getElementById("genreSelect");
+      var value = select.value;
+      var containers = document.getElementsByClassName("table-container");
+      for (var i = 0; i < containers.length; i++) {
+        containers[i].style.display = "none";
+      }
+      var active = document.getElementById("container-" + value);
+      if (active) {
+        active.style.display = "block";
+      }
+    }
+    // Show "All" by default
+    document.getElementById("genreSelect").value = "All";
+    showTable();
+  </script>
+</body>
+</html>
